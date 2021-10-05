@@ -1,0 +1,235 @@
+@charset "UTF-8";
+
+.width_1900{width:1800px;}
+.width_1600{width:1600px;}
+.width_1200{width:1200px;}
+
+/* Top.jsp / 상단 */
+.top{height:20px; text-align:center; padding:10px; color:black; background: black;
+		font:bold 17px Dotum; /* font-family: "돋움"; font-weight: 600; font-size: 17px; */}
+.top .font_color{color: white;}
+
+/* Login.jsp / 로그인 페이지 */
+	/* 로그인 모달 */
+#my_modal {display: none; width: 300px; padding: 20px 60px; background-color: #fefefe;
+      	  border: 1px solid #888; border-radius: 3px;}
+#my_modal .modal_close_btn { position: absolute; top: 10px; right: 10px;}
+#popup_open_btn{float: right; margin-right: 10px; border: 1px solid white; color:white;}  
+.modal_button{background-color:black; border:1px solid black; border-radius:5px; color:white; 
+				text-align:center; width:300px; height:40px; font-size:15px; margin:10px;}
+.modal_button:hover{background: white; color: black; }
+.modal_input{width:300px; height:35px; margin:10px; border-radius:5px; border:solid 1px gray;}
+								
+/* Menu.jsp */
+.menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  max-width: 0;
+  transition: 0.5s ease;
+  z-index: 1;
+  background-color: #eee;
+}
+
+.burger-icon {
+  cursor: pointer;
+  display: inline-block;
+  position: absolute;
+  z-index: 2;
+  padding: 8px 0;
+  top: 4px;
+  left: 4px;
+  user-select: none;
+  width: auto;
+  margin: 0;
+  margin-left: 10px;
+}
+
+.burger-icon .burger-sticks {
+  background: #333;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 18px;
+}
+
+.burger-icon .burger-sticks:before,
+.burger-icon .burger-sticks:after {
+  background: #333;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+.burger-icon .burger-sticks:before {
+  top: 5px;
+}
+
+.burger-icon .burger-sticks:after {
+  top: -5px;
+}
+
+.burger-check {
+  display: none;
+}
+
+.burger-check:checked~.menu {
+  max-width: 200px;
+}
+
+.burger-check:checked~.burger-icon .burger-sticks {
+  background: transparent;
+}
+
+.burger-check:checked~.burger-icon .burger-sticks:before {
+  transform: rotate(-45deg);
+}
+
+.burger-check:checked~.burger-icon .burger-sticks:after {
+  transform: rotate(45deg);
+}
+
+.burger-check:checked~.burger-icon:not(.steps) .burger-sticks:before,
+.burger-check:checked~.burger-icon:not(.steps) .burger-sticks:after {
+  top: 0;
+}					
+
+/* Menu2.jsp / 메뉴 */
+.menu2_box{height: 85px; text-align: center; position: relative;}
+.menu2_box ul{line-height: 85px; height:inherit;}
+.menu2_box ul li {
+            display:inline;                         /*  세로나열을 가로나열로 변경 */
+            font:bold 17px Dotum;                     /* 폰트 설정 - 12px의 돋움체 굵은 글씨로 표시 */
+            padding:0 25px;                      /* 각 메뉴 간격 */
+       		 }
+.menu2_box a:hover{color: red;}
+.menu2_box ul li a{color: black;} /* a태그 지정 색깔 때문에 li에서 컬러 지정해도 다시 a태그 컬러로 돌아온다 */
+.menu2 .img4{width: 24px; height: 24px;}
+		
+.menu2 .save_box{position: absolute; top: 32px; right:255px; }
+.menu2 .save_box button{border:1px solid black;border-radius: 20px;width:100px;height:26px;}
+		
+/* Schedule_list.jsp / 스케줄 리스트 */
+/* body, 좌, 우 background: green; background:pink; background:blue; */
+	.schedule_list{margin:0 auto; padding-top: 50px; text-align:center;}
+	.schedule_list_box{width:50%; height:520px;  float:left; position: relative;}
+	.schedule_list_map{width:50%; height:50%; float:left; }
+	
+	/* schedule_list_box 스케줄 */
+	.schedule_list_box .btn{background-color: white; border:1px solid black; border-radius:5px; color: black; text-align:center; 
+			width:300px; height:40px; font-size:15px; margin:10px; position: relative;}
+	.schedule_list_box .btn:hover {background: skyblue; color: black;}
+	
+	/* 휴지통 이미지 */
+	.schedule_list .trash_box{position: absolute; top: 5px; right: 16px; width:20px; height:30px;}
+	.schedule_list #trash_img{width:100%; height:100%;}
+	
+	/* 공유, 참고 버튼 */
+	.schedule_list .share{width: 100px; height:35px; border-radius: 5px; background-color: #D1B2FF; 
+			position: absolute; bottom: 70px;; right: 20px;}
+	.schedule_list .btn2{width: 100px; height:35px; border-radius: 5px; background-color: #D1B2FF; 
+			position: absolute; bottom: 20px;; right: 20px;}
+
+/* Schedule_share_board / 스케줄 공유 게시판 */
+	.share_board_div{width:880px; height: 1200px; margin:auto; padding:0;} /* margin:auto = 가운데정렬  260*/
+	
+	.share_board_ul li {float:left; width: 150px; height: 200px; box-shadow: 0 1px 3px 0 hsla(0,0%,86.3%,.3); border-radius: 4px; border: 1px solid #d9d9d9;
+						margin-right:30px; margin-bottom:30px; background:red;
+					}
+	.share_board_ul li:nth-child(5), .share_board_ul li:nth-child(10){margin-right:0;} /* 5번째 10번째요소 초기화 */
+	.share_board_ul li img{width:100%; height:100%;}
+	.share_board_ul li a{width:100%;} /* div, img 다 a 안에 갇혀 있기 때문에 a에 너비 값 주기*/
+	.share_board_ul li .img_box{height:150px; overflow:hidden;} /* overflow:hidden: 넘어간 것 가려줌,가둠 */
+	.share_board_ul li .img_box img{width:100%;height:100%;}
+	.share_board_ul li .info_box{height:50px;}
+
+/* Tour_list.jsp / 관광지 리스트 페이지 */
+	/* body div */
+	.Tour_list{width: 1098px; height: 1200px; margin:auto; padding:0;} /* margin:auto = 가운데정렬  260*/
+
+	/* 이미지, 설명 박스 */
+	.Tour_list_box li {float:left; width:250px; height:300px; box-shadow: 0 1px 3px 0 hsla(0,0%,86.3%,.3); border-radius: 4px; border: 1px solid #d9d9d9;
+				margin-right:30px; margin-bottom:30px; background: skyblue;
+					}
+	.Tour_list_box li:nth-child(4), .right li:nth-child(8){margin-right:0;} /* 4번째 8번째요소 초기화 */
+	.Tour_list_box li a{width:100%;} /* div, img 다 a 안에 갇혀 있기 때문에 a에 너비 값 주기*/
+	.Tour_list_box li .img_box{height:230px; overflow:hidden;} /* overflow:hidden: 넘어간 것 가려줌,가둠 */
+	.Tour_list_box li .img_box img{width:100%;height:100%;}
+	.Tour_list_box li .info_box{height:70px;}
+
+/* Tour_page / 관광지 상세 페이지 */
+	/* body div */
+	.tour_page{width:1300px; height:900px; margin:0 auto;}
+
+
+	/* 관광지 이미지 */
+	.tour_page .tour_img{float:left; overflow:hidden; width:42%; height:80%; margin:10px 0 0 0px;}
+		.tour_img img{width:100%; height:100%; box-shadow: 0 1px 3px 0 hsla(0,0%,86.3%,.3);
+					border-radius: 10px; border: 1px solid #d9d9d9;}
+					
+	.tour_page .tour_img2{float:left; overflow:hidden ;width:28%; height:40%; margin:10px 0 0 5px;}
+		.tour_img2 img{width:100%; height:100%; box-shadow: 0 1px 3px 0 hsla(0,0%,86.3%,.3);
+						border-radius: 10px; border: 1px solid #d9d9d9;}
+					
+	.tour_page .tour_img3{float:left; overflow:hidden; width:28%; height:40%; margin:10px 0 0 5px;}
+		.tour_img3 img{width:100%; height:100%; box-shadow: 0 1px 3px 0 hsla(0,0%,86.3%,.3);
+					border-radius: 10px; border: 1px solid #d9d9d9;}
+	/* 설명 박스 */				
+	.tour_page_box{float:left; overflow:hidden; width:55%; height:38%; margin:10px 0 0 15px;
+			border-radius: 10px; border: 1px solid #d9d9d9; text-align:center; line-height:40px;}
+			
+	/* 장바구니 버튼 */
+	.tour_page_box .basket_button{background-color:#6799FF; border:1px solid #6799FF; border-radius:5px; color:black; text-align:center; 
+			width:220px; height:50px; font-weight:bold; font-size:20px;}
+	.tour_page_box .basket_button:hover {background:#9DCFFF; color:black;}
+
+/* Tour_plan / 장바구니 페이지 */
+	/* body, 좌, 우 background: green; background:pink; background:blue; */
+	.tour_plan{margin:0 auto; width:1500px; padding-top: 50px; background:blue;}
+	.tour_plan .middle{clear:both;}
+	.left_reviewlist{text-align:center; width:30%; height:600px; float:left; background:#D1B2FF; margin: 0 auto;}
+	.right_map{width:30%; height:600px; float:left;
+			margin: 0 50px; background: #747474; line-height:500px; color:white;}
+	
+	.left_reviewlist a{text-decoration:none; color:black;} 
+	.left_reviewlist a:hover{text-decoration:underline;}
+	
+	.left_reviewlist li{width: 100px; height:20px; margin:10px; text-align:center;}
+	.float li{float: left; background:gray; width:100px; height:50px; margin: 0 20px 0 0;  position:relative;}
+	
+	/* 설명 박스 */
+	.plan_mini_box{width:80px; height:80px; background:skyblue; padding:10px; float:left;}
+	
+	
+	/* 하단 박스 */
+	.ps{position: relative; clear:both;}
+	
+	/* 스케줄 짜는 박스 (가로-패딩: 1000px-20px-20px), 높이도 마찬가지 */
+	.plan_box{width:860px;; height:60px; background:pink; padding:20px; float:left;}
+	
+	/* 저장 버튼 */
+	.save_btn{position: absolute; right:206px; top:0px;}
+	
+	/* 칼럼 */
+	.portlet-header{width:100%;height:100%;text-align:center;}
+	
+	/* 넘버 자식 */
+	.ord{position: absolute; left:13px; top:11px;}
+	
+	/* li 선 */ 
+	.line{border: 1px solid black;}
+
+
+
+
+
+
+
+
+
+			
