@@ -1,4 +1,4 @@
-package com.yuhan.sql;
+package com.sns.sql;
 
 
 import java.sql.Date;

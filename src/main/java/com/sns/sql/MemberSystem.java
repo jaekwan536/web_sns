@@ -1,4 +1,4 @@
-package com.yuhan.sql;
+package com.sns.sql;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
