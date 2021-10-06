@@ -1,4 +1,4 @@
-package com.yuhan.sns;
+package com.sns.table;
 
 import java.io.Serializable;
 import java.sql.Date;
@@ -24,6 +24,7 @@ public class Cart implements Serializable {
 	private int tour_seq;
 	@Column(name="date")
 	private Date date;
+	// date 구조 변경 => NotNull=false, default = now()
 	
 	
 	public Date getDate() {
